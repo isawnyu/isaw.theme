@@ -18,8 +18,8 @@ class UtilsView(BrowserView):
         self.request = request
         self.portal_catalog = getToolByName(context, 'portal_catalog')
 
-    def getUpcomingEvents(self, limit=2):
-        """Grabbing latests news stuff for the news landing page"""
+    def getUpcomingEvents(self, limit=3):
+        """Grabbing latest events for the home page"""
         return self.portal_catalog(portal_type=['Conference',
                                                 'Exhibition',
                                                 'Event',
